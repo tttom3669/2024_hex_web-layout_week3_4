@@ -1,0 +1,236 @@
+// ------ display ------
+@each $key, $value in $display-value {
+  .#{$key} {
+    display: $value;
+  }
+}
+
+@each $breakpointKey, $breakpointValue in $breakpoint-values {
+  @each$key, $value in $display-value {
+    .#{$key}-#{$breakpointKey} {
+      @include media-breakpoint-up($breakpointKey) {
+        display: $value;
+      }
+    }
+  }
+}
+
+// ------ color ------
+@each $key, $value in $colors {
+  .text-#{$key} {
+    color: $value;
+  }
+  .bg-#{$key} {
+    background-color: $value;
+  }
+}
+
+// ------ flex ------
+@each $key, $value in $flex-value {
+  .justify-#{$key} {
+    justify-content: $value;
+  }
+  .items-#{$key} {
+    align-items: $value;
+  }
+}
+@each $key, $value in $flex-directions {
+  .flex-#{$key} {
+    flex-direction: $value;
+  }
+}
+@each $breakpointKey, $breakpointValue in $breakpoint-values {
+  @each $key, $value in $flex-directions {
+    .flex-#{$breakpointKey}-#{$key} {
+      @include media-breakpoint-up($breakpointKey) {
+        flex-direction: $value;
+      }
+    }
+  }
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+// ------ font-size ------
+@each $key, $value in $font-sizes {
+  .text-#{$key} {
+    font-size: $value;
+  }
+}
+@each $breakpointKey, $breakpointValue in $breakpoint-values {
+  @each $key, $value in $font-sizes {
+    .text-#{$breakpointKey}-#{$key} {
+      @include media-breakpoint-up($breakpointKey) {
+        font-size: $value;
+      }
+    }
+  }
+}
+// ------ font-weight ------
+@each $key, $value in $font-weight {
+  .fw-#{$key} {
+    font-weight: $value;
+  }
+}
+// ------ font-style ------
+@each $value in $font-style {
+  .font-#{$value} {
+    font-style: $value;
+  }
+}
+// ------ text-align ------
+@each $value in $text-align {
+  .text-#{$value} {
+    text-align: $value;
+  }
+}
+
+// ------ spacers ------
+@each $key, $value in $spacers {
+  .gap-#{$key} {
+    gap: $value;
+  }
+  .gap-y-#{$key} {
+    row-gap: $value;
+  }
+}
+@each $breakpointKey, $breakpointValue in $breakpoint-values {
+  @each $key, $value in $spacers {
+    .gap-#{$breakpointKey}-#{$key} {
+      @include media-breakpoint-up($breakpointKey) {
+        gap: $value;
+      }
+    }
+  }
+}
+
+@each $dimensionKey, $dimensionValue in $dimensions {
+  @each $directionKey, $directionValue in $directions {
+    @each $key, $value in $spacers {
+      .#{$dimensionKey}#{$directionKey}-#{$key} {
+        #{$dimensionValue}-#{$directionValue}: $value;
+      }
+    }
+  }
+}
+@each $breakpointKey, $breakpointValue in $breakpoint-values {
+  @each $dimensionKey, $dimensionValue in $dimensions {
+    @each $directionKey, $directionValue in $directions {
+      @each $key, $value in $spacers {
+        @include media-breakpoint-up($breakpointKey) {
+          .#{$dimensionKey}#{$directionKey}-#{$breakpointKey}-#{$key} {
+            #{$dimensionValue}-#{$directionValue}: $value;
+          }
+        }
+      }
+    }
+  }
+}
+
+@each $dimensionKey, $dimensionValue in $dimensions {
+  @each $key, $value in $spacers {
+    .#{$dimensionKey}-#{$key} {
+      #{$dimensionValue}: $value;
+    }
+    .#{$dimensionKey}y-#{$key} {
+      #{$dimensionValue}-top: $value;
+      #{$dimensionValue}-bottom: $value;
+    }
+    .#{$dimensionKey}x-#{$key} {
+      #{$dimensionValue}-left: $value;
+      #{$dimensionValue}-right: $value;
+    }
+  }
+}
+
+@each $breakpointKey, $breakpointValue in $breakpoint-values {
+  @each $dimensionKey, $dimensionValue in $dimensions {
+    @each $key, $value in $spacers {
+      .#{$dimensionKey}-#{$breakpointKey}-#{$key} {
+        @include media-breakpoint-up($breakpointKey) {
+          #{$dimensionValue}: $value;
+        }
+      }
+      .#{$dimensionKey}y-#{$breakpointKey}-#{$key} {
+        @include media-breakpoint-up($breakpointKey) {
+          #{$dimensionValue}-top: $value;
+          #{$dimensionValue}-bottom: $value;
+        }
+      }
+      .#{$dimensionKey}x-#{$breakpointKey}-#{$key} {
+        @include media-breakpoint-up($breakpointKey) {
+          #{$dimensionValue}-left: $value;
+          #{$dimensionValue}-right: $value;
+        }
+      }
+    }
+  }
+}
+
+// ------ positions ------
+@each $value in $positions {
+  .#{$value} {
+    position: $value;
+  }
+}
+
+@each $directionValue in $positions-directions {
+  @each $key, $value in $positions-value {
+    .#{$directionValue}-#{$key} {
+      #{$directionValue}: $value;
+    }
+  }
+}
+
+// ------ length ------
+@each $lengthKey, $lengthValue in $length {
+  @each $key, $value in $length-value {
+    .#{$lengthKey}-#{$key} {
+      #{$lengthValue}: $value;
+    }
+  }
+}
+@each $breakpointKey, $breakpointValue in $breakpoint-values {
+  @each $lengthKey, $lengthValue in $length {
+    @each $key, $value in $length-value {
+      @include media-breakpoint-up($breakpointKey) {
+        .#{$lengthKey}-#{$breakpointKey}-#{$key} {
+          #{$lengthValue}: $value;
+        }
+      }
+    }
+  }
+}
+
+// ------ z-index ------
+@each $value in zIndex {
+  .z-#{$value} {
+    z-index: $value;
+  }
+}
+
+// ------ img ------
+.img-fluid {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+@each $value in $object-fit {
+  .object-#{$value} {
+    object-fit: $value;
+  }
+}
+
+// ------ border ------
+c {
+  border-color: $color-white;
+}
+.border-b {
+  border-bottom-width: 1px;
+  border-style: solid;
+}

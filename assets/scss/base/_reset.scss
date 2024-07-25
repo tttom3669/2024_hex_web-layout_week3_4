@@ -1,0 +1,20 @@
+@import './meyerweb-reset';
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input {
+  font-size: inherit;
+}

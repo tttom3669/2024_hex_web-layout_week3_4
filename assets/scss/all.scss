@@ -1,5 +1,12 @@
-@import './layout/header.scss';
-@import './layout/footer.scss';
+@import 'abstracts/variables';
+@import 'abstracts/mixins';
+@import 'abstracts/extend';
 
+@import './base/reset';
+@import './base/typography';
+@import './base/utilities';
+
+@import './layout/layout';
+@import './components/components';
 
 @import './pages/index.scss';

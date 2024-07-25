@@ -1,4 +1,10 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
+.footer {
+  &__icon {
+    height: auto;
+    width: 24px;
+    aspect-ratio: 1 / 1;
+    @include media-breakpoint-up(md) {
+      width: 48px;
+    }
+  }
 }

@@ -1,0 +1,143 @@
+// ------ colors ------
+//
+$color-black: #000000;
+$color-white: #fff;
+$color-primary: #aa0601;
+$color-secondary: #650300;
+$color-gray-1: #fbf2f2;
+$color-gray-2: #707070;
+
+$colors: (
+  'black': $color-black,
+  'white': $color-white,
+  'primary': $color-primary,
+  'secondary': $color-secondary,
+  'gray-1': $color-gray-1,
+  'gray-2': $color-gray-2,
+);
+
+// ------ display ------
+$display-value: (
+  hidden: none,
+  flex: flex,
+  block: block,
+  inline-block: inline-block,
+);
+
+// ------ flex ------
+$flex-value: (
+  center: center,
+  between: space-between,
+  end: flex-end,
+);
+$flex-directions: (
+  col: column,
+  row: row,
+);
+
+// ------ grid system ------
+$gutter-width: 24px;
+$grid-column-num: 12;
+
+// ------ breakpoint ------
+$breakpoint-values: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+);
+
+// ------ font-size ------
+$font-size-base: 1rem;
+$font-sizes: (
+  //14px,
+  sm: $font-size-base * 0.875,
+  //16px,
+  base: $font-size-base * 1,
+  //20px,【
+  xl: $font-size-base * 1.25,
+  // 24PX
+  2xl: $font-size-base * 1.5,
+  // 36PX
+  4xl: $font-size-base * 2.25,
+  // 48PX
+  5xl: $font-size-base * 3,
+  // 32PX
+  8: $font-size-base * 2,
+  // 64px
+  16: $font-size-base * 4,
+  16px: 16px,
+  24px: 24px
+);
+// ------ font-weight ------
+$font-weight: (
+  normal: 400,
+  medium: 500,
+  bold: 700,
+  'black': 900,
+);
+// ------ font-style ------
+$font-style: (italic);
+
+// ------ text-align ------
+$text-align: (center, right, left);
+
+// ------ spacers ------
+$directions: (
+  t: top,
+  b: bottom,
+  l: left,
+  r: right,
+);
+$dimensions: (
+  p: padding,
+  m: margin,
+);
+$spacers: (
+  auto: auto,
+  0: 0,
+  1: 4px,
+  2: 8px,
+  3: 12px,
+  // 16px
+  4: $font-size-base * 1,
+  // 24px
+  6: $font-size-base * 1.5,
+  // 32px
+  8: $font-size-base * 2,
+  // 36px
+  9: $font-size-base * 2.25,
+  // 40px
+  10: $font-size-base * 2.5,
+  // 48px
+  12: $font-size-base * 3,
+  // 64px
+  16: $font-size-base * 4,
+  // 72px
+  18: $font-size-base * 4.5,
+  // 80px
+  20: $font-size-base * 5,
+);
+// ------ positions ------
+$positions: (absolute relative);
+$positions-directions: (top, bottom, left, right);
+$positions-value: (
+  0: 0,
+);
+
+// ------ length ------
+$length: (
+  w: width,
+  h: height,
+);
+$length-value: (
+  auto: auto,
+  full: 100%,
+  100vw: 100vw,
+  1\/2: 50%,
+);
+
+// ------ z-index ------
+$zIndex: (0);
+
+// ------ img ------
+$object-fit: (cover);

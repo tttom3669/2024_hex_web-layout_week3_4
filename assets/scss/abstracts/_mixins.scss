@@ -1,0 +1,16 @@
+// ------ breakpoint (min-width) ------
+@mixin media-breakpoint-up($breakpoint-key) {
+  $value: map-get($breakpoint-values, $breakpoint-key);
+
+  @media screen and (min-width: $value) {
+    @content;
+  }
+}
+// ------ breakpoint (max-width) ------
+@mixin media-breakpoint-down($breakpoint-key) {
+  $value: map-get($breakpoint-values, $breakpoint-key);
+
+  @media screen and (max-width: $value) {
+    @content;
+  }
+}
