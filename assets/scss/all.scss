@@ -1,6 +1,5 @@
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
-@import 'abstracts/extend';
 
 @import './base/reset';
 @import './base/typography';
@@ -10,3 +9,5 @@
 @import './components/components';
 
 @import './pages/index.scss';
+@import './pages/question';
+@import './pages/store';

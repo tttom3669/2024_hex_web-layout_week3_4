@@ -227,10 +227,21 @@
 }
 
 // ------ border ------
-c {
-  border-color: $color-white;
+@each $key, $value in $colors {
+  .border-#{$key} {
+    border-color: $value;
+  }
+}
+.border {
+  border-width: 1px;
+  border-style: solid;
 }
 .border-b {
   border-bottom-width: 1px;
   border-style: solid;
+}
+
+// other
+.text-nowrap {
+  white-space: nowrap;
 }

@@ -1,11 +1,12 @@
 // ------ colors ------
-//
+
 $color-black: #000000;
 $color-white: #fff;
 $color-primary: #aa0601;
 $color-secondary: #650300;
 $color-gray-1: #fbf2f2;
 $color-gray-2: #707070;
+$color-gray-3: #00000020;
 
 $colors: (
   'black': $color-black,
@@ -14,6 +15,8 @@ $colors: (
   'secondary': $color-secondary,
   'gray-1': $color-gray-1,
   'gray-2': $color-gray-2,
+  'gray-3': $color-gray-3,
+  'transparent': transparent,
 );
 
 // ------ display ------
@@ -63,9 +66,12 @@ $font-sizes: (
   5xl: $font-size-base * 3,
   // 32PX
   8: $font-size-base * 2,
+  // 36PX
+  9: $font-size-base * 2.25,
   // 64px
   16: $font-size-base * 4,
   16px: 16px,
+  19px: 19px,
   24px: 24px
 );
 // ------ font-weight ------
@@ -116,6 +122,8 @@ $spacers: (
   18: $font-size-base * 4.5,
   // 80px
   20: $font-size-base * 5,
+  // 96px
+  24: $font-size-base * 6,
 );
 // ------ positions ------
 $positions: (absolute relative);

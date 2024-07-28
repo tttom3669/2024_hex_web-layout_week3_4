@@ -18,3 +18,13 @@ textarea {
 textarea {
   min-height: 136px;
 }
+
+.heading-1 {
+  font-size: 20px;
+  font-weight: 700;
+  border-left: 8px solid $color-primary;
+  padding-left: 16px;
+  @include media-breakpoint-up(sm) {
+    font-size: 48px;
+  }
+}
