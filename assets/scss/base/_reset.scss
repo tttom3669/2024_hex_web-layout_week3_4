@@ -18,3 +18,10 @@ a {
 input {
   font-size: inherit;
 }
+
+button {
+  border: none;
+  background-color: unset;
+  outline: none;
+  cursor: pointer;
+}

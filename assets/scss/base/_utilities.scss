@@ -48,6 +48,9 @@
     }
   }
 }
+.self-end {
+  align-self: flex-end;
+}
 
 .flex-auto {
   flex: 1 1 auto;
@@ -104,6 +107,11 @@
     .gap-#{$breakpointKey}-#{$key} {
       @include media-breakpoint-up($breakpointKey) {
         gap: $value;
+      }
+    }
+    .gap-y-#{$breakpointKey}-#{$key} {
+      @include media-breakpoint-up($breakpointKey) {
+        row-gap: $value;
       }
     }
   }
@@ -244,4 +252,8 @@
 // other
 .text-nowrap {
   white-space: nowrap;
+}
+
+.opacity-0\.7 {
+  opacity: 0.7;
 }

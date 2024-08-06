@@ -1,0 +1,52 @@
+.pagination {
+  margin-top: 124px;
+  color: $color-gray-4;
+  height: 48px;
+  &,
+  ol {
+    display: flex;
+    justify-content: center;
+  }
+  ol {
+    border: 1px solid $color-gray-4;
+    li {
+      &:not(:last-child) {
+        border-right: 1px solid $color-gray-4;
+      }
+    }
+  }
+
+  &__number {
+    display: inline-block;
+    padding: 12px 16px;
+    height: 100%;
+    transition: all 0.3s;
+    font-size: 16px;
+    @include media-breakpoint-up(sm) {
+      font-size: 18px;
+    }
+    &:hover,
+    &:active,
+    &--active {
+      background: #000;
+      color: white;
+    }
+  }
+  &__next,
+  &__prev {
+    display: inline-block;
+    padding: 11px 12px;
+    font-size: 16px;
+    @include media-breakpoint-up(sm) {
+      font-size: 19px;
+    }
+    border: 1px solid $color-gray-4;
+  }
+  &__prev {
+    border-right: none;
+  }
+  &__next {
+    background-color: $color-gray-1;
+    border-left: none;
+  }
+}

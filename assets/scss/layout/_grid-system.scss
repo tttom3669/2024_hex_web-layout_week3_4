@@ -12,19 +12,18 @@
   }
 }
 @each $breakpointKey, $breakpointValue in $breakpoint-values {
-  @include media-breakpoint-up($breakpointKey) {
-    .container-#{$breakpointKey} {
-      width: 100%;
+  .container-#{$breakpointKey} {
+    width: 100%;
+    @include media-breakpoint-up($breakpointKey) {
       padding-left: calc($gutter-width / 2);
       padding-right: calc($gutter-width / 2);
       margin: 0 auto;
-
-      @include media-breakpoint-up(md) {
-        max-width: 696px + $gutter-width;
-      }
-      @include media-breakpoint-up(lg) {
-        max-width: 1296px + $gutter-width;
-      }
+    }
+    @include media-breakpoint-up(md) {
+      max-width: 696px + $gutter-width;
+    }
+    @include media-breakpoint-up(lg) {
+      max-width: 1296px + $gutter-width;
     }
   }
 }

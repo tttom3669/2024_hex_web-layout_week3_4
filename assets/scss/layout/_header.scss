@@ -23,9 +23,10 @@
     &:nth-child(2) {
       border-bottom: none;
     }
-
+    flex-basis: 50%;
     @include media-breakpoint-up(md) {
       border: none;
+      flex-basis: unset;
       a {
         padding: 0;
       }
