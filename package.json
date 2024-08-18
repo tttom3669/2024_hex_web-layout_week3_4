@@ -10,12 +10,12 @@
     "deploy": "vite build && gh-pages -d dist"
   },
   "devDependencies": {
-    "aos": "^2.3.4",
     "ejs": "^3.1.9",
     "vite": "^4.2.0",
     "vite-plugin-ejs": "^1.6.4"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "gh-pages": "^5.0.0",
     "glob": "^10.2.2",
     "sass": "^1.61.0",
