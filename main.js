@@ -1,3 +1,5 @@
 import './assets/scss/all.scss';
+import 'aos/dist/aos.css';
+import AOS from 'aos';
 
-console.log("Hello world!");
+AOS.init();
